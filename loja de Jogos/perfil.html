@@ -46,27 +46,7 @@
   </div>
 
   <!-- Script da sidebar -->
-  <script>
-    function openSidebar() {
-      document.getElementById("sidebar").style.width = "250px";
-    }
+  <script src="sidebar.js"></script>
 
-    function closeSidebar() {
-      document.getElementById("sidebar").style.width = "0";
-    }
-
-    document.getElementById("openSidebar").addEventListener("click", openSidebar);
-
-    document.getElementById("uploadImage").addEventListener("change", function(event) {
-      const file = event.target.files[0];
-      if (file) {
-        const reader = new FileReader();
-        reader.onload = function(e) {
-          document.getElementById("profileImage").src = e.target.result;
-        };
-        reader.readAsDataURL(file);
-      }
-    });
-  </script>
 </body>
 </html>
