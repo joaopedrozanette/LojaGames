@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listagem de Produtos</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Botão para abrir a sidebar -->
+    <button id="openSidebar">&#9776;</button>
+
+    <!-- Sidebar oculta -->
+    <div id="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeSidebar()">&times;</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="cadastro.html">Cadastro de Produtos</a>
+        <a href="listagem.html">Listagem de Produtos</a>
+        <a href="perfil.html">Perfil de Usuário</a>
+        <a href="login.html">Login</a>
+    </div>
+
+    <!-- Tabela de Listagem de Produtos -->
+    <div class="container mt-5">
+        <h2>Listagem de Produtos</h2>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Imagem</th>
+                    <th>Nome</th>
+                    <th>Descrição</th>
+                    <th>Preço</th>
+                    <th>Quantidade</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Exemplo de produto -->
+                <tr>
+                    <td><img src="play5.jpg" alt="Playstation 5" width="150"></td>
+                    <td>Playstation 5</td>
+                    <td>Console da Sony 1tb com leitor de disco, 1 controle incluído.</td>
+                    <td>R$ 3500,00</td>
+                    <td>150</td>
+                    <td>
+                        <button class="btn btn-warning btn-sm">Editar</button>
+                        <button class="btn btn-danger btn-sm">Excluir</button>
+                    </td>
+                </tr>
+                <!-- Adicione mais produtos conforme necessário -->
+                <tr>
+                    <td><img src="xbox.jpg" alt="Xbox Series X" width="150"></td>
+                    <td>Xbox Series X</td>
+                    <td>Console da Microsoft 1tb com leitor de disco, 1 controle incluído.</td>
+                    <td>R$ 3500,00</td>
+                    <td>200</td>
+                    <td>
+                        <button class="btn btn-warning btn-sm">Editar</button>
+                        <button class="btn btn-danger btn-sm">Excluir</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="download.jpg" alt="GTA 6" width="150"></td>
+                    <td>GTA 6(PRÉ-VENDA)</td>
+                    <td>Jogo da franquia Grand Theft Auto, disponivel para pré-venda.</td>
+                    <td>R$ 500,00</td>
+                    <td>150</td>
+                    <td>
+                        <button class="btn btn-warning btn-sm">Editar</button>
+                        <button class="btn btn-danger btn-sm">Excluir</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Script da sidebar -->
+    <script>
+        function openSidebar() {
+            document.getElementById("sidebar").style.width = "250px";
+        }
+
+        function closeSidebar() {
+            document.getElementById("sidebar").style.width = "0";
+        }
+
+        document.getElementById("openSidebar").addEventListener("click", openSidebar);
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> 
+</head>
+<body>
+
+  <!-- Botão para abrir a sidebar -->
+  <button id="openSidebar">&#9776;</button>
+
+  <!-- Sidebar oculta -->
+  <div id="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeSidebar()">&times;</a>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="cadastro.html">Cadastro de Produtos</a>
+    <a href="listagem.html">Listagem de Produtos</a>
+    <a href="perfil.html">Perfil de Usuário</a>
+    <a href="login.html">Logout</a>
+  </div>
+
+  <!-- Dashboard -->
+  <div class="container mt-5">
+    <h2>Dashboard de Vendas</h2>
+    
+    <!-- Gráfico de Linhas -->
+    <div class="my-4 w-100">
+      <canvas id="myChart" width="900" height="380"></canvas>
+    </div>
+
+    <!-- Seção de Produtos Mais Vendidos -->
+    <div class="row mt-5">
+      <h3>Produtos Mais Vendidos</h3>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="play5.jpg" class="card-img-top" alt="Produto 1">
+          <div class="card-body">
+            <h5 class="card-title">Playstation 5</h5>
+            <p class="card-text">Preço: R$ 3500,00</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="xbox.jpg" class="card-img-top" alt="Produto 2">
+          <div class="card-body">
+            <h5 class="card-title">Xbox Series X</h5>
+            <p class="card-text">Preço: R$ 3500,00</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="download.jpg" class="card-img-top" alt="Produto 3">
+          <div class="card-body">
+            <h5 class="card-title">GTA 6(PRÉ-VENDA)</h5>
+            <p class="card-text">Preço: R$ 500,00</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Script da sidebar -->
+  <script>
+    function openSidebar() {
+      document.getElementById("sidebar").style.width = "250px";
+    }
+
+    function closeSidebar() {
+      document.getElementById("sidebar").style.width = "0";
+    }
+
+    document.getElementById("openSidebar").addEventListener("click", openSidebar);
+  </script>
+
+  <!-- Script do Gráfico -->
+  <script src="dashboard.js"></script>
+
+</body>
+</html>
